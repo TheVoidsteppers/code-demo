@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      // require.config({ paths: { 'vs': 'http://img.chinanetcenter.com/lib/monaco-editor/0.17.1/min/vs' } })
+      // window.MonacoEnvironment = { getWorkerUrl: () => proxy }
+
+      // let proxy = URL.createObjectURL(new Blob([`
+      //   self.MonacoEnvironment = {
+      //     baseUrl: 'http://img.chinanetcenter.com/lib/monaco-editor/0.17.1/min/'
+      //   };
+      //   importScripts('http://img.chinanetcenter.com/lib/monaco-editor/0.17.1/min/vs/base/worker/workerMain.js');
+      // `], { type: 'text/javascript' }))
+
+      // require(['vs/editor/editor.main'], function () {
+      //   window.monaco = monaco
+      // })
+    </script>
+  </body>
+</html>
