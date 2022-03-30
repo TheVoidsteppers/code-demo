@@ -1,5 +1,15 @@
 <template>
   <div>
+    <pre>
+    {
+      name: 'Tom',
+      birthday: '2022-01-01',
+      hobby: ['code', 'basketball'],
+      status: true,
+      msg: '&lt;span style="font-size: 10px; font-weight: bold;"&gt;Audit Success&lt;/span&gt;'
+    }
+    </pre>
+
     <div class="form-item">
       <label for="name">Name: </label>
       <span>{{ form.name }}</span>
