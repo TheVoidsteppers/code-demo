@@ -1,14 +1,12 @@
 <template>
   <div>
-    <pre>
-    {
+    <pre>{
       name: 'Tom',
       birthday: '2022-01-01',
       hobby: ['code', 'basketball'],
       status: true,
       msg: '&lt;span style="font-size: 10px; font-weight: bold;"&gt;Audit Success&lt;/span&gt;'
-    }
-    </pre>
+   }</pre>
 
     <div class="form-item">
       <label for="name">Name: </label>
@@ -22,7 +20,7 @@
       <label>Hobby: </label>
       <span>
         <span v-for="(item, index) in form.hobby" :key="index">
-          {{ index }}-{{ item }}
+          {{ index + 1 }}-{{ item }}
           <span v-show="index !== form.hobby.length - 1">,</span>
         </span>
       </span>
@@ -73,6 +71,10 @@ export default {
 }
 .gray {
   color: red;
+}
+pre {
+  padding: 5px;
+  border: 1px dashed #999;
 }
 ul,li {
   margin: 0;

@@ -7,16 +7,16 @@
     <div class="form-item">
       <label for="birthday">Birthday:</label><br/>
       <input v-model="form.birthday" id="birthday" type="date" name="birthday">
-      <div>You are {{ age }} years old</div>
+      <span class="mg-l5">You are {{ age }} years old</span>
     </div>
     <div class="form-item">
       <label>Hobby </label>
-      <button v-show="form.hobby.length <= 5" @click="handleAdd">Add</button><br/>
+      <button v-show="form.hobby.length < 5" @click="handleAdd">Add</button><br/>
       <ul>
         <li v-for="(item,index) in form.hobby" :key="index">
-          <span>{{ index }} </span>
-          <input v-model="form.hobby[index]">
-          <button v-show="form.hobby.length > 1" @click="handleDelete(index)">Delete</button>
+          <span>{{ index + 1 }} </span>
+          <input v-model="form.hobby[index]" class="mg-l5">
+          <button v-show="form.hobby.length > 1" class="mg-l5" @click="handleDelete(index)">Delete</button>
         </li>
       </ul>
     </div>
@@ -60,9 +60,13 @@ export default {
 <style scoped>
 .form-item {
   margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 .btn {
   margin-top: 20px;
+}
+.mg-l5 {
+  margin-left: 5px;
 }
 ul,li {
   margin: 0;
